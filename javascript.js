@@ -51,6 +51,11 @@ function PlayerGame(ComputerChoice){
         alert('Incorect input, Try again')
     }
 }   
-
-PlayerGame()
-alert('Your score is ' + scoreHuman +' Computers score '+scoreMachine);
+do{
+    PlayerGame(ComputerChoice(moves));
+    alert('Your score is ' + scoreHuman +' Computers score '+scoreMachine);
+}while (scoreHuman < 5 && scoreMachine < 5);
+if (scoreHuman == 5){
+    alert("Player has won, congratulations")
+}
+else {alert("Computer has won, refresh to try again")}
